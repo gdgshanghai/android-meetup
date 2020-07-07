@@ -39,7 +39,7 @@
 
 
 
-<video src="./source/highlight.mp4"></video>
+<video src="/20200704-android11-meetup/source/highlight.mp4"></video>
 
 
 
@@ -58,7 +58,7 @@
 
 ### **Window Insets-布局的监听器**
 
-![Window_Insets](.\source\Window_Insets.webp)
+![Window_Insets](/20200704-android11-meetup/source/Window_Insets.webp)
 
 我们在设计布局的时候，布局文件中的某些元素，有时候被导航栏或者是状态栏遮住，有时候也会被弹出的键盘覆盖。在 Android 11 版本里面增加了新的 WindowInsets 回调函数`setWindowInsetsAnimatorCallback`，使用该回调函数可以更方便的处理 WindowInset 不同的状态。
 
@@ -66,15 +66,15 @@
 
 1. 给 WindowInsets 设置监听，检测键盘的可见性。可以方便的根据软键盘状态调整布局文件里面的内容
 
-![Window_Insets](.\source\Window_Insets2.webp)    
+![Window_Insets](/20200704-android11-meetup/source/Window_Insets2.webp)    
 
 2. 监听键盘动画事件
 
-![Window_Insets](.\source\Window_Insets3.webp)
+![Window_Insets](/20200704-android11-meetup/source/Window_Insets3.webp)
 
 3. 主动触发键盘动画
 
-![Window_Insets](.\source\Window_Insets4.webp)
+![Window_Insets](/20200704-android11-meetup/source/Window_Insets4.webp)
 
  
 
@@ -84,21 +84,21 @@ https://github.com/android/user-interface-samples/tree/master/WindowInsetsAnimat
 
 ### **聊天**
 
-![chat](.\source\chat.webp)
+![chat](/20200704-android11-meetup/source/chat.webp)
 
 上图中通知栏可以看到一个聊天的场景，我们把人作为设计的中心，每个聊天对象的头像的 icon 都很明显。这是如何实现的呢，我们来看一下代码。
 
 第一步先建立一个 Person 的类，一定要把这个 person 设置 `setLongLived(true)`
 
-![chat](.\source\chat2.webp)
+![chat](/20200704-android11-meetup/source/chat2.webp)
 
 第二步使用 `ShortcutManagerCompat.pushDynamicShortcut(shortcutInfo)`
 
-![chat](.\source\chat3.webp)
+![chat](/20200704-android11-meetup/source/chat3.webp)
 
 最后是设置 `MessagingStyle`
 
-![chat](.\source\chat4.webp)    
+![chat](/20200704-android11-meetup/source/chat4.webp)    
 
 这样就完成了创建一个包含 ShortcutInfo 的 Notification
 
@@ -106,11 +106,11 @@ https://github.com/android/user-interface-samples/tree/master/WindowInsetsAnimat
 
 下图演示了 bubbles 的功能，有收缩和展开两种状态。
 
-![bubbles](.\source\bubbles.webp)
+![bubbles](/20200704-android11-meetup/source/bubbles.webp)
 
 在 Android 10 的时候，使用 Bubble 需要打开开发者模式，现在 Android 11 可以正常使用了。
 
- ![bubbles](.\source\bubbles2.webp)
+ ![bubbles](/20200704-android11-meetup/source/bubbles2.webp)
 
 Bubble 其实是一个基于 notification 的 API 做的扩展，他能在系统的任何一个界面被开启。
 
@@ -118,19 +118,19 @@ Bubble 其实是一个基于 notification 的 API 做的扩展，他能在系统
 
 第一步，首先你在 manifest 中声明一个 Activity，用户点了 bubbles 以后会开启这个 Activity
 
-![bubbles](.\source\bubbles3.webp)
+![bubbles](/20200704-android11-meetup/source/bubbles3.webp)
 
 第二步，添加启动 Activity 代码
 
-![bubbles](.\source\bubbles4.webp)
+![bubbles](/20200704-android11-meetup/source/bubbles4.webp)
 
 第三步，在 Notification 中添加 BubbleMetadata
 
-![bubbles](.\source\bubbles5.webp) 
+![bubbles](/20200704-android11-meetup/source/bubbles5.webp) 
 
 最后，创建和 Metadata 绑定的 Notification
 
-![bubbles](.\source\bubbles6.webp)
+![bubbles](/20200704-android11-meetup/source/bubbles6.webp)
 
 Sample 链接地址：
 
@@ -142,7 +142,7 @@ https://github.com/android/user-interface-samples/tree/master/People
 
 隐私是 Android 11 的其中一个重点，Android 11 给用户带来了更佳的数据保护，主要体现在5个方面
 
-![privacy](.\source\privacy.webp)
+![privacy](/20200704-android11-meetup/source/privacy.webp)
 
 ### **5G**
 
@@ -157,7 +157,7 @@ https://github.com/android/user-interface-samples/tree/master/People
 
 我们来看下相关代码
 
-![5G](.\source\5g.webp)
+![5G](/20200704-android11-meetup/source/5g.webp)
 
 ### **生物识别**
 
@@ -167,13 +167,13 @@ Android 11 里面提供标准的方法帮助开发者判断用户所设置的生
 
 相关代码如下：
 
-![bio](.\source\bio.webp)    
+![bio](/20200704-android11-meetup/source/bio.webp)    
 
 ### **NNAPI v1.3**
 
 神经网络API
 
-![NN](.\source\nn.webp)    
+![NN](/20200704-android11-meetup/source/nn.webp)    
 
 在Android 11里面，提升 GPU，DSP ，NPU 的性能，如果懂这个领域的同学，肯定会想到不同的方法去利用这些新的操作，还有新的不同的方法去把自己的模型运作得更顺畅。
 
@@ -183,19 +183,19 @@ adb 使用 Wi-Fi 来连接设备，调试程序。目前来说我们稳定版本
 
 下图就是系统提供的设置的窗口，如果有 pixel 手机的话，可以尝试一下。
 
-![devtool](.\source\devtool.webp)
+![devtool](/20200704-android11-meetup/source/devtool.webp)
 
 ### **Nullablity 注解**
 
 在 Android 11 的 SDK 里面，为了方便开发者使用，调用不同的函数，还有提高 Java 语言和 Kotlin 的互用性，在 SDK 里面加上了一些新的 Nullability 注解。在这版本才加上的注解会命名为 `RecentlyNullable` 或 `RecentlyNonNull`。为了减少对应用兼容性的影响，违反了这类注解只会导致构建时的警告，不会影响构建。当下一版本发布时就会把这些 Recently* 注解迁移到 `@Nullable` 或 `@NonNull`。违反的代码就会导致构建错误。
 
-![nullability](.\source\nullability.webp)    
+![nullability](/20200704-android11-meetup/source/nullability.webp)    
 
 ### **崩溃原因报告**
 
 在 Android 11 里面有一些新的 API ，可以帮助开发者收到有关应用闪退的错误报告了。有时候你用你的App闪退的时候，你会觉得无从入手，因为闪退的情况太多了，其中尤其是 ANR 是特别难抓的。在安卓11里面我们提供了一个新的API `App exit info`
 
-![crash](.\source\crash.webp)    
+![crash](/20200704-android11-meetup/source/crash.webp)    
 
 其实它的功能很简单，在 App 闪退的时候，Android 系统里面会把闪退的原因写入到缓存里面去，后面用户再启动 APP 的时候，就可以再读取这个缓存里面有什么内容，从而可以帮助开发者追踪不同的问题的日志。
 
@@ -203,79 +203,79 @@ adb 使用 Wi-Fi 来连接设备，调试程序。目前来说我们稳定版本
 
 Native安卓上面写C++的一个工具，它可以帮助开发者检测在内存里面发现到的一些问题。
 
-![gwp](.\source\gwp.webp)
+![gwp](/20200704-android11-meetup/source/gwp.webp)
 
 如果想用这个功能的话，就可以在 manifest 里面的 Application 节点或者 activity 节点指定，代码如下图：
 
-![gwp](.\source\gwp2.webp)
+![gwp](/20200704-android11-meetup/source/gwp2.webp)
 
 ### **ADB 增量 APK 安装**
 
 我们在 Android 11 里面增强了 adb 的速度，最大支持10倍加速
 
-![apk](.\source\apk.webp) 
+![apk](/20200704-android11-meetup/source/apk.webp) 
 
 具体 adb 命令如下：
 
-![apk](.\source\apk2.webp) 
+![apk](/20200704-android11-meetup/source/apk2.webp) 
 
 ### **行为变更开关**
 
 Android 11 系统有一个新的系统的 UI，如下图，可以给开发者提供不同功能的开关，在做调试的时候，如果你只是想针对某一个功能做调试，就可以到这个页面，单独的开启或者关闭某个功能，从而帮助开发者定位问题。
 
-![active](.\source\active.webp)
+![active](/20200704-android11-meetup/source/active.webp)
 
 也可以使用 `adb command` 来开启相关的开关。
 
-![active](.\source\active2.webp)
+![active](/20200704-android11-meetup/source/active2.webp)
 
 ### **现代 API**
 
-![modern](.\source\modern.webp) 
+![modern](/20200704-android11-meetup/source/modern.webp) 
 
 ### **最新的组件**
 
-![jetpack](.\source\jetpack.webp)
+![jetpack](/20200704-android11-meetup/source/jetpack.webp)
 
 ### **paging 3.0 支持Kotlin coroutine**
 
-![jetpack](.\source\jetpack2.webp) 
+![jetpack](/20200704-android11-meetup/source/jetpack2.webp) 
 
 ### **Hilt:基于Dagger的DI方案**
 
 Hilt尽量的帮助开发者减少dagger的样板代码。
 
-![jetpack](.\source\jetpack3.webp) 
+![jetpack](/20200704-android11-meetup/source/jetpack3.webp) 
 
 ### **Jetpack Compose**
 
 暂时还在预览版，还在添加一些新的功能，不建议在生产环境中使用
 
- ![jetpack](.\source\jetpack4.webp) 
+ ![jetpack](/20200704-android11-meetup/source/jetpack4.webp) 
 
 ### **工具-Android Studio**
 
 ####  4.0稳定版：MotionLayout+Motion Editor
 
-![as](.\source\as.webp) 
+![as](/20200704-android11-meetup/source/as.webp) 
 
 #### 4.0稳定版：Layout Inspector
 
 对布局提供一个3d的可视化工具
 
-![as](.\source\as2.webp)
+![as](/20200704-android11-meetup/source/as2.webp)
 
 #### 4.0 Beta：Database Inspector (Room, SQLite)
 
 直接读取数据库中的数据，方便开发过程中进行数据库方面的调试
 
-![as](.\source\as3.webp)
+![as](/20200704-android11-meetup/source/as3.webp)
  
 #### 4.2：Canary
 
-![as](.\source\as4.webp) 
+![as](/20200704-android11-meetup/source/as4.webp) 
 
-![as](.\source\as5.webp) 
+![as](/20200704-android11-meetup/source/as5.webp) 
 
 
 今天的分享就到到此为止，谢谢大家。
@@ -318,7 +318,7 @@ Hilt尽量的帮助开发者减少dagger的样板代码。
 
 **枯燥 问：**
 
-** Jetpack 有一个正在开发的 UI 工具库 Compose，关于它我想问的两个问题：它和 Flutter 原理之间有什么区别，和以后会不会颠覆常规的安卓开发模式。**
+**Jetpack 有一个正在开发的 UI 工具库 Compose，关于它我想问的两个问题：它和 Flutter 原理之间有什么区别，和以后会不会颠覆常规的安卓开发模式。**
 
 
 
@@ -376,6 +376,7 @@ compose release 的时间点目前来说的最快的时间点是下一年。
 
 
 > 本文所提及的所有链接
+> 
 > [bubbles：https://github.com/android/user-interface-samples/tree/master/People](https://github.com/android/user-interface-samples/tree/master/People)
 >
 > [Window Insets：https://github.com/android/user-interface-samples/tree/master/WindowInsetsAnimation](https://github.com/android/user-interface-samples/tree/master/WindowInsetsAnimation)
@@ -390,7 +391,7 @@ compose release 的时间点目前来说的最快的时间点是下一年。
 
 Google Developer Groups 谷歌开发者社区，是谷歌开发者部门发起的全球项目，面向对 Google 和开源技术感兴趣的人群而存在的公益性开发者社区。GDG Shanghai 创立于 2009 年，是全球 GDG 社区中最活跃和知名的技术社区之一，每年举办 30 – 50 场大大小小的科技活动，每年影响十几万以上海为中心辐射长三角地带的开发者及科技从业人员。
 
-![gdg](.\source\gdg.jpg)  
+![gdg](/20200704-android11-meetup/source/gdg.jpg)  
 
 社区中的各位组织者均是来自各个行业有着本职工作的互联网从业者，我们需要更多新鲜血液的加入！如果你对谷歌技术感兴趣，业余时间可调配，认同社区的价值观，愿意为社区做出贡献，欢迎加入我们成为社区志愿者！
 
